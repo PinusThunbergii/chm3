@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.calculateButton = new System.Windows.Forms.Button();
             this.mainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.aTextBox = new System.Windows.Forms.TextBox();
@@ -43,6 +43,8 @@
             this.resultTextBox = new System.Windows.Forms.TextBox();
             this.resultLabel = new System.Windows.Forms.Label();
             this.displayChartCheckBox = new System.Windows.Forms.CheckBox();
+            this.mLabel = new System.Windows.Forms.Label();
+            this.mTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,22 +60,22 @@
             // 
             // mainChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.mainChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.mainChart.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.mainChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.mainChart.Legends.Add(legend3);
             this.mainChart.Location = new System.Drawing.Point(361, 37);
             this.mainChart.Name = "mainChart";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series2";
-            this.mainChart.Series.Add(series3);
-            this.mainChart.Series.Add(series4);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Series2";
+            this.mainChart.Series.Add(series5);
+            this.mainChart.Series.Add(series6);
             this.mainChart.Size = new System.Drawing.Size(675, 466);
             this.mainChart.TabIndex = 1;
             this.mainChart.Text = "chart1";
@@ -132,15 +134,15 @@
             // resultTextBox
             // 
             this.resultTextBox.ForeColor = System.Drawing.Color.ForestGreen;
-            this.resultTextBox.Location = new System.Drawing.Point(114, 295);
+            this.resultTextBox.Location = new System.Drawing.Point(114, 316);
             this.resultTextBox.Name = "resultTextBox";
-            this.resultTextBox.Size = new System.Drawing.Size(127, 20);
+            this.resultTextBox.Size = new System.Drawing.Size(214, 20);
             this.resultTextBox.TabIndex = 8;
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(36, 298);
+            this.resultLabel.Location = new System.Drawing.Point(36, 319);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(37, 13);
             this.resultLabel.TabIndex = 9;
@@ -156,11 +158,30 @@
             this.displayChartCheckBox.Text = "display chart";
             this.displayChartCheckBox.UseVisualStyleBackColor = true;
             // 
+            // mLabel
+            // 
+            this.mLabel.AutoSize = true;
+            this.mLabel.Location = new System.Drawing.Point(38, 278);
+            this.mLabel.Name = "mLabel";
+            this.mLabel.Size = new System.Drawing.Size(15, 13);
+            this.mLabel.TabIndex = 12;
+            this.mLabel.Text = "m";
+            // 
+            // mTextBox
+            // 
+            this.mTextBox.Location = new System.Drawing.Point(114, 278);
+            this.mTextBox.Name = "mTextBox";
+            this.mTextBox.Size = new System.Drawing.Size(127, 20);
+            this.mTextBox.TabIndex = 11;
+            this.mTextBox.Text = "30";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 559);
+            this.Controls.Add(this.mLabel);
+            this.Controls.Add(this.mTextBox);
             this.Controls.Add(this.displayChartCheckBox);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.resultTextBox);
@@ -193,6 +214,8 @@
         private System.Windows.Forms.TextBox resultTextBox;
         private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.CheckBox displayChartCheckBox;
+        private System.Windows.Forms.Label mLabel;
+        private System.Windows.Forms.TextBox mTextBox;
     }
 }
 
