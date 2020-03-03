@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.calculateButton = new System.Windows.Forms.Button();
             this.mainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.aTextBox = new System.Windows.Forms.TextBox();
@@ -39,6 +40,9 @@
             this.bLabel = new System.Windows.Forms.Label();
             this.nLabel = new System.Windows.Forms.Label();
             this.nTextBox = new System.Windows.Forms.TextBox();
+            this.resultTextBox = new System.Windows.Forms.TextBox();
+            this.resultLabel = new System.Windows.Forms.Label();
+            this.displayChartCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,17 +58,23 @@
             // 
             // mainChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.mainChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.mainChart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.mainChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.mainChart.Legends.Add(legend2);
             this.mainChart.Location = new System.Drawing.Point(361, 37);
             this.mainChart.Name = "mainChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.mainChart.Series.Add(series1);
-            this.mainChart.Size = new System.Drawing.Size(609, 323);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series2";
+            this.mainChart.Series.Add(series3);
+            this.mainChart.Series.Add(series4);
+            this.mainChart.Size = new System.Drawing.Size(675, 466);
             this.mainChart.TabIndex = 1;
             this.mainChart.Text = "chart1";
             // 
@@ -117,13 +127,43 @@
             this.nTextBox.Name = "nTextBox";
             this.nTextBox.Size = new System.Drawing.Size(127, 20);
             this.nTextBox.TabIndex = 6;
-            this.nTextBox.Text = "1";
+            this.nTextBox.Text = "1000";
+            // 
+            // resultTextBox
+            // 
+            this.resultTextBox.ForeColor = System.Drawing.Color.ForestGreen;
+            this.resultTextBox.Location = new System.Drawing.Point(114, 295);
+            this.resultTextBox.Name = "resultTextBox";
+            this.resultTextBox.Size = new System.Drawing.Size(127, 20);
+            this.resultTextBox.TabIndex = 8;
+            // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.Location = new System.Drawing.Point(36, 298);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(37, 13);
+            this.resultLabel.TabIndex = 9;
+            this.resultLabel.Text = "Result";
+            // 
+            // displayChartCheckBox
+            // 
+            this.displayChartCheckBox.AutoSize = true;
+            this.displayChartCheckBox.Location = new System.Drawing.Point(130, 365);
+            this.displayChartCheckBox.Name = "displayChartCheckBox";
+            this.displayChartCheckBox.Size = new System.Drawing.Size(85, 17);
+            this.displayChartCheckBox.TabIndex = 10;
+            this.displayChartCheckBox.Text = "display chart";
+            this.displayChartCheckBox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 559);
+            this.Controls.Add(this.displayChartCheckBox);
+            this.Controls.Add(this.resultLabel);
+            this.Controls.Add(this.resultTextBox);
             this.Controls.Add(this.nLabel);
             this.Controls.Add(this.nTextBox);
             this.Controls.Add(this.bLabel);
@@ -150,6 +190,9 @@
         private System.Windows.Forms.Label bLabel;
         private System.Windows.Forms.Label nLabel;
         private System.Windows.Forms.TextBox nTextBox;
+        private System.Windows.Forms.TextBox resultTextBox;
+        private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.CheckBox displayChartCheckBox;
     }
 }
 
