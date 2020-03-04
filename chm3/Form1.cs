@@ -135,9 +135,9 @@ namespace chm3
                 standardDeviation /= (double)m - 1.0d;
                 standardDeviation = Math.Sqrt(standardDeviation);
                 double standardError = standardDeviation / Math.Sqrt((double)m);
-                double tK = 1.0d;
+                double tK = 2.0595d;
                 double confidenceInterval = standardError * tK;
-                resultTextBox.Text = $"{averange}+-{confidenceInterval}";
+                resultTextBox.Text =string.Format("{0:0.0000}", averange) + "±Δ" + string.Format("{0:0.0000}", confidenceInterval);
             }
             catch(Exception ex)
             {
