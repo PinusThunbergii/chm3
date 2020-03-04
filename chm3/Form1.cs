@@ -120,10 +120,10 @@ namespace chm3
                 double averange = 0.0d;
                 for(int i = 0; i < m; i++)
                 {
-                    results[i] = integrateMonteCarlo(function, a, b, n, AddDotsOnChart);
-                    averange += results[i];
                     mainChart.Series[0].Points.Clear();
                     mainChart.Series[1].Points.Clear();
+                    results[i] = integrateMonteCarlo(function, a, b, n, AddDotsOnChart);
+                    averange += results[i];
                     //Console.WriteLine(results[i]);
                 }
                 averange /= m;
